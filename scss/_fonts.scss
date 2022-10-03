@@ -1,0 +1,37 @@
+@font-face {
+	font-family: $titleFont;
+	src: url('../fonts/gothambold1.eot');
+    src: local('gothambold1'), 
+        url('../fonts/gothambold1.woff') format('woff'),
+        url('../fonts/gothambold1.ttf') format('truetype');
+}
+@font-face {
+	font-family: $menuFont;
+	src: url('../fonts/GothamBook.eot');
+    src: local('GothamBook'), 
+        url('../fonts/GothamBook.woff') format('woff'),
+        url('../fonts/GothamBook.ttf') format('truetype');
+}
+@font-face {
+	font-family: $sectionTitle;
+    src: local('gotham-medium'), 
+        url('../fonts/gotham-medium.woff') format('woff'),
+        url('../fonts/gotham-medium.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'Gotham-Medium-Regular';
+    src: local('Gotham-Medium-Regular'), 
+        url('../fonts/Gotham-Medium-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family: $regularTextFont;
+    src: local('OpenSans-Regular'),
+        url('../fonts/OpenSans-Regular.woff') format('woff'), 
+        url('../fonts/OpenSans-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'OpenSans-Italic', sans-serif;
+    src: local('OpenSans-Italic'),
+        url('../fonts/OpenSans-Italic.woff') format('woff'), 
+        url('../fonts/OpenSans-Italic.ttf') format('truetype');
+}

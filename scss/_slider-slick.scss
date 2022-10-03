@@ -1,0 +1,26 @@
+.slider-wrapper {
+    .slick-dots {
+        width: 100%;
+        height: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        li {
+            margin-left: 40px;
+            &.slick-active {
+                button {
+                    border: none;
+                    background: $txtLight;
+                }
+            }
+            button {
+                font-size: 0;
+                width: 12px;
+                height: 12px;
+                border: 1px solid $txtLight;
+                background: none;
+                border-radius: 50%;
+            }
+        }
+    }
+}

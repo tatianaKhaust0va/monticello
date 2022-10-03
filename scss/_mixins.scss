@@ -1,0 +1,124 @@
+@mixin bgGradient {
+    background: linear-gradient(45deg, $blueBgLight 0%, $blueBgDark 100%);
+}
+@mixin bgGradientSect {
+    background: linear-gradient(45deg, $bgBlueDark 0%, $bgBlueLight 100%);
+}
+@mixin flex {
+    display: flex;
+}
+@mixin flex_C {
+    display: flex;
+    justify-content: center;
+}
+@mixin flex_B {
+    display: flex;
+    justify-content: space-between;
+}
+@mixin flex_Col {
+    @include flex_B;
+    flex-direction: column;
+}
+@mixin flex-col_dir {
+    display: flex;
+   flex-direction: column;
+}
+
+@mixin flex_A {
+    display: flex;
+    justify-content: space-around;
+}
+@mixin circle_style {
+    width: 9px;
+    height: 9px;
+    border: 1px solid $txtLight;
+    border-radius: 50%;
+}
+@mixin flex_Align-C {
+    align-items: center;
+    display: flex;
+}
+@mixin flex_Align-C_B {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+@mixin flex_C-C {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+@mixin flex-End {
+    display: flex;
+    align-items: end;
+}
+@mixin flex-dir-Center-Beetween  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+@mixin flex-dir-Center-Center  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+@mixin flex-col-Ev {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+@mixin fAwesome-icon_style {
+    position: relative;
+    &::before {
+        position: absolute;
+        display: inline-block;
+        content: "";
+        top: 0;
+        left: 0;
+        font-family: "Font Awesome 6 Brands";
+        font-weight: 400;
+    }
+}
+@mixin big_circle_style {
+    width: 40px;
+    height: 40px;
+    border: 1px solid $txtLight;
+    border-radius: 50%;
+    display: block;
+}
+@mixin btn {
+    width: 189px;
+    border: 1.5px solid $txtDark;
+    cursor: pointer;
+    background: none;
+    text-transform: uppercase;
+    height: 60px;
+}
+@mixin socialStyle {
+    @include flex_B;
+    align-items: center;
+    width: 100%;
+    max-width: 170px;
+    &__link {
+      color: $txtLight;
+      @include big_circle_style;
+      position: relative;
+      i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 16px;
+      }
+    }
+    @media screen and (max-width: 768px) and (min-width: 320px) {
+        align-items: flex-start;
+        margin-bottom: 10px;
+    }
+}
+@mixin flex_column_Align-C {
+    flex-direction: column;
+    align-items: center;
+}
