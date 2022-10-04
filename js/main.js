@@ -13,30 +13,18 @@ const hamburgerBlock = document.querySelector("#bur"),
 
 // <=================== Preloader ===============>
 
-document.addEventListener('DOMContentLoaded', () => {
-    const preloader = document.querySelector('#preloader');
-    const mediafiles = document.querySelectorAll('img, use');
-    const body = document.querySelector('.body');
-    let i = 0;
-    mediafiles.forEach((file, index) => {
-        file.onload = () => {
-            i++;
-            persent.innerHTML = (( ( 100 / mediafiles.length) * i) << 0 + '%');
-            if(i === mediafiles.length){
-                persent.innerHTML = 100;
-                if(!preloader.classList.contains('loaded')) {
-                    preloader.classList.add('loaded');
-                    body.classList.remove('loading');
-                } else {
-                    preloader.classList.remove('loaded');
-                    body.classList.add('loading');
-                }
-               
+document.body.onload = function() {
+    const preloader = document.getElementById('preloader');
+    console.log(`{preloader}`);
+    if(preloader.classList.contains('preloader--done') ) {
+        preloader.classList.remove('preloader--done');
+    } else {
+        preloader.classList.add('preloader--done');
+    }
 
-            }
-        }
-    });
-});
+
+    
+}
 
 // <=================== Preloader ===============>
 

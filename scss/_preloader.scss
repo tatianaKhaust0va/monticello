@@ -2,63 +2,37 @@
   overflow: hidden;
 }
 .preloader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1000;
-    background: $txtLight;
-    visibility: visible;
-    opacity: 1;
-    transition:  .9s all ease-out;
-    &.loaded {
-        opacity: 0;
-        visibility: hidden;
-        z-index: -1;
-    }
-    &__loader, .loader__persent {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-    #persent {
-        font-family: Arial, sans-serif;
-        font-weight: 700;
-    }
-     
-}
-
-@keyframes ldio-o67gjna7nob {
-  0% { transform: translate(-50%,-50%) rotate(0deg); }
-  100% { transform: translate(-50%,-50%) rotate(360deg); }
-}
-.ldio-o67gjna7nob div {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  border: 15px solid #5a93d9;
-  border-top-color: transparent;
-  border-radius: 50%;
-}
-.ldio-o67gjna7nob div {
-  animation: ldio-o67gjna7nob 1s linear infinite;
-  top: 100px;
-  left: 100px
-}
-.loadingio-spinner-rolling-oqstlfav8ba {
-  width: 200px;
-  height: 200px;
-  display: inline-block;
-  overflow: hidden;
-}
-.ldio-o67gjna7nob {
+  position: fixed;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
-  position: relative;
-  transform: translateZ(0) scale(1);
-  backface-visibility: hidden;
-  transform-origin: 0 0; /* see note above */
+  background: #fff;
+  z-index: 11;
+  transition: 1s all;
+  opacity: 1;
+  visibility: visible;
+  &__item {
+      width: 75px;
+      height: 75px;
+      border: 10px solid #f0f0f0;
+      border-radius: 50%;
+      border-top-color: #2c4058;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: 1s spin infinite linear;
+  }
+  &--done {
+      display: none;
+  }
+} 
+@keyframes spin {
+  from {
+      transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+      transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
-.ldio-o67gjna7nob div { box-sizing: content-box; }
