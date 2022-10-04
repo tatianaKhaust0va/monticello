@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     mediafiles.forEach((file, index) => {
         file.onload = () => {
             i++;
-            persent.innerHTML = ((i * 100) / mediafiles.length).toFixed(1);
+            persent.innerHTML = (( ( 100 / mediafiles.length) * i) << 0 + '%');
             if(i === mediafiles.length){
                 persent.innerHTML = 100;
                 if(!preloader.classList.contains('loaded')) {
