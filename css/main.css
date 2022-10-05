@@ -389,7 +389,7 @@ template {
 }
 
 .loading {
-  overflow: hidden;
+  overflow-y: hidden;
 }
 
 .preloader {
