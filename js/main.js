@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
             body.classList.remove('loading');
 
         }
-    }, 1000);
+    }, 1500);
 })
 
 // <=================== Preloader ===============>
