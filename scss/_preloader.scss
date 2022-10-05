@@ -8,7 +8,7 @@
   width: 100%;
   height: 100%;
   background: #fff;
-  z-index: 11;
+  z-index: 1000;
   transition: 1s all;
   opacity: 1;
   visibility: visible;
@@ -25,7 +25,9 @@
       animation: 1s spin infinite linear;
   }
   &--done {
-      display: none;
+      visibility: hidden;
+      opacity: 0;
+      z-index: -1;
   }
 } 
 @keyframes spin {
