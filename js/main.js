@@ -13,22 +13,24 @@ const hamburgerBlock = document.querySelector("#bur"),
 
 // <=================== Preloader ===============>
 
-document.body.onload = function() {
+document.addEventListener("DOMContentLoaded", () => {
     const preloader = document.getElementById('preloader');
-    console.log(`{preloader}`);
-    if(preloader.classList.contains('preloader--done') ) {
-        preloader.classList.remove('preloader--done');
-    } else {
-        preloader.classList.add('preloader--done');
-    }
+    const body = document.querySelector('.body');
+    setTimeout(() => {
+        if(preloader.classList.contains('preloader--done') ) {
+            preloader.classList.remove('preloader--done');
+            body.classList.add('loading');
+        } else {
+            preloader.classList.add('preloader--done');
+            body.classList.remove('loading');
 
-
-    
-}
+        }
+    }, 1000);
+})
 
 // <=================== Preloader ===============>
 
-// <================== Menu hamburger ==========>
+      // <================== Menu hamburger ==========>
 
 hamburgerBlock.addEventListener('click', () => {
     if (hamburgerBlock) {
